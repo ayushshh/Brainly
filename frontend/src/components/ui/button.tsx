@@ -21,7 +21,7 @@ const sizeVariant = {
     "lg" : "text-lg py-4 px-6"
 };
 
-const defaultStyle = "rounded-md mt-3 flex gap-2 hover:cursor-pointer item-center justify-center"
+const defaultStyle = "rounded-md mt-3 flex gap-2 hover:cursor-pointer item-center justify-center h-10"
 
 export const Button = (props: ButtonProps) => {
     return (
