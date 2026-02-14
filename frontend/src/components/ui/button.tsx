@@ -2,11 +2,11 @@ import type { ReactElement } from "react";
 //svg stands for sclable vector graphics
 interface ButtonProps{
     variant : "primary" | "secondary";
-    size : "sm" | "md" | "lg";
+    size : "sm" | "md" | "lg" | "xl";
     text : string;
     startIcon?: ReactElement; //here it will be reactElement bsc it store react icon
     endIcon?: ReactElement;
-    onClick : () => void;
+    onClick?: () => void;
 };
 
 const VariantStyle = {
@@ -18,15 +18,16 @@ const VariantStyle = {
 const sizeVariant = {
     "sm" : "text-sm py-1 px-2",
     "md" : "text-base py-2 px-4",
-    "lg" : "text-lg py-4 px-6"
+    "lg" : "text-lg py-4 px-6",
+    "xl" : "text-lg py-4 px-35"
 };
 
-const defaultStyle = "rounded-md mt-3 flex gap-2 hover:cursor-pointer item-center justify-center h-10"
+const defaultStyle = "rounded-md mt-3 flex gap-2 hover:cursor-pointer items-center justify-center h-10"
 
 export const Button = (props: ButtonProps) => {
     return (
         <>
-            <button className={`${defaultStyle} ${VariantStyle[props.variant]} ${sizeVariant[props.size]}`}>{props.startIcon} {props.text} {props.endIcon}</button>
+            <button className={`${defaultStyle} ${VariantStyle[props.variant]} ${sizeVariant[props.size]}`} onClick={props.onClick}>{props.startIcon} {props.text} {props.endIcon}</button>
         </>
     )
 }

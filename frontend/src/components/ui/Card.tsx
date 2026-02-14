@@ -15,7 +15,7 @@ interface CardProps {
 
 export function Card(prop: CardProps) {
   return (
-    <div className="bg-white w-72 rounded-lg p-5 m-5 h-auto shadow-md flex flex-col justify-between">
+    <div className="bg-white w-72 rounded-lg p-5 h-auto shadow-md flex flex-col justify-between">
       {/* Header */}
       <div className="flex justify-between items-start">
         <div className="flex items-center font-semibold text-xl text-gray-700">
